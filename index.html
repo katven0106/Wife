@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a9dcff">
+  <meta name="description" content="Enter your username and password to continue.">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="sun-glow"></div>
+    <div class="cloud cloud-one"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-two"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-three"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-four"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-five"><i></i><i></i><i></i></div>
+  </div>
+
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Welcome">
+        <span class="brand-icon" aria-hidden="true">♡</span>
+        <span>Welcome</span>
+      </a>
+      <span class="header-note">Please sign in to continue</span>
+    </header>
+
+    <section class="screen active" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-card glass-card">
+        <div class="eyebrow"><span aria-hidden="true">☁</span> Account details</div>
+        <div class="illustration hello-illustration" aria-hidden="true">
+          <span class="illustration-sparkle sparkle-left">✦</span>
+          <span class="illustration-heart">♡</span>
+          <span class="illustration-sparkle sparkle-right">✧</span>
+          <span class="illustration-cloud cloud-back"></span>
+          <span class="illustration-cloud cloud-front"></span>
+        </div>
+        <h1 id="welcome-title">Welcome</h1>
+        <p class="intro-copy">Create your login details to continue.</p>
+
+        <form id="welcome-form" class="form-stack" autocomplete="off">
+          <label for="username">Create Username</label>
+          <div class="input-wrap">
+            <span class="input-icon" aria-hidden="true">♡</span>
+            <input id="username" name="username" type="text" placeholder="Enter username" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="32" required>
+          </div>
+
+          <label for="create-password">Create password</label>
+          <div class="input-wrap">
+            <span class="input-icon lock-icon" aria-hidden="true">⌑</span>
+            <input id="create-password" name="create-password" type="password" placeholder="Enter password" autocomplete="off" minlength="4" required>
+            <button class="visibility-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+          <p class="field-hint">Enter a username and password to continue.</p>
+
+          <button class="primary-button" type="submit">
+            <span>Continue</span><span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+        </form>
+        <p class="privacy-note"><span aria-hidden="true">♡</span> Your details are only used for this visit.</p>
+      </div>
+      <div class="bottom-caption" aria-hidden="true"><span>clear skies</span><span class="caption-dot">·</span><span>take your time</span></div>
+    </section>
+
+    <section class="screen" id="lock-screen" aria-labelledby="lock-title" hidden>
+      <div class="lock-card glass-card">
+        <button class="back-button" type="button" data-go="welcome-screen"><span aria-hidden="true">←</span> Back</button>
+        <div class="eyebrow"><span aria-hidden="true">☁</span> One little secret</div>
+        <div class="padlock-art" aria-hidden="true">
+          <span class="lock-sparkle lock-sparkle-one">✦</span>
+          <span class="lock-sparkle lock-sparkle-two">✧</span>
+          <div class="shackle"></div>
+          <div class="lock-body"><span class="lock-heart">♡</span><span class="lock-keyhole"></span></div>
+        </div>
+        <h1 id="lock-title">A little secret,<br>just for <span id="lock-name">you</span></h1>
+        <p class="intro-copy">Some things are only for us. Enter the date<br class="desktop-break"> that means a little extra to our hearts.</p>
+        <p class="hint-pill"><span aria-hidden="true">♡</span> Hint: the date and month of our monthsary</p>
+        <form id="passcode-form" class="form-stack passcode-stack">
+          <label for="passcode">Our special date</label>
+          <div class="input-wrap passcode-wrap">
+            <span class="input-icon" aria-hidden="true">✧</span>
+            <input id="passcode" name="passcode" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" placeholder="· · · ·" aria-describedby="passcode-error" required>
+          </div>
+          <p id="passcode-error" class="error-message" aria-live="polite"></p>
+          <button class="primary-button" type="submit">
+            <span>Unlock our little world</span><span class="button-arrow" aria-hidden="true">♡</span>
+          </button>
+        </form>
+        <p class="privacy-note"><span aria-hidden="true">✦</span> Four numbers, one very special us</p>
+      </div>
+    </section>
+
+    <section class="screen" id="surprise-screen" aria-labelledby="surprise-title" hidden>
+      <div class="memory-book" id="memory-book">
+        <div class="book-pages" aria-live="polite">
+          <div class="book-cover" id="book-cover" role="button" tabindex="0" aria-label="Open the book by tapping or clicking the cover">
+            <div class="cover-collage" aria-label="A collage of four photos">
+              <img class="cover-photo cover-photo-one" src="assets/pic1.jpeg" alt="A favorite photo together">
+              <img class="cover-photo cover-photo-two" src="assets/pic2.jpeg" alt="A favorite photo together">
+              <img class="cover-photo cover-photo-three" src="assets/pic3.jpeg" alt="A favorite photo together">
+              <img class="cover-photo cover-photo-four" src="assets/pic4.jpeg" alt="A favorite photo together">
+            </div>
+            <div class="cover-copy">
+              <p class="cover-kicker">A collection of</p>
+              <h1 id="surprise-title">OUR MOMENTS<br>TOGETHER</h1>
+              <p class="cover-description">This book belong to my wife</p>
+            </div>
+            <p class="cover-prompt">Touch the cover to open</p>
+            <span class="cover-heart" aria-hidden="true">♡</span>
+          </div>
+
+          <div class="memory-page" id="memory-page" role="button" tabindex="0" aria-label="Tap the right or left side, or use the arrow keys, to turn the page" hidden>
+            <div class="page-topline"><span>OUR MOMENTS TOGETHER</span><span class="page-number" id="page-number">01 / 10</span></div>
+            <section class="first-memory" id="first-memory" aria-labelledby="first-memory-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage of our first photos">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic5.jpeg" alt="One of our first pictures together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic6.jpeg" alt="One of our first pictures together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic7.jpeg" alt="One of our first pictures together" draggable="false">
+                </figure>
+              </div>
+              <h2 id="first-memory-title">OUR FIRST PIC</h2>
+              <p>Hi wife do u still remember our first pic? Ang cute natin both oh HAHA. I remember nung time na ‘yan crush na kita eh, grabe noh? Ang torpe ko talaga sayo non. Hiyang hiya pa ko mag pic niyan kasama ka, ang Ganda ba naman ng asawa ko eh hayyy. I love you baby ko</p>
+            </section>
+            <section class="flower-memory" id="flower-memory" aria-labelledby="flower-memory-title" hidden>
+              <div class="flower-memory-collage" aria-label="A collage of the flowers you gave me">
+                <figure class="flower-collage-photo flower-collage-photo-one">
+                  <img src="assets/pic8.jpeg" alt="The first flowers you gave me" draggable="false">
+                </figure>
+                <figure class="flower-collage-photo flower-collage-photo-two">
+                  <img src="assets/pic9.jpeg" alt="The first flowers you gave me" draggable="false">
+                </figure>
+              </div>
+              <h2 id="flower-memory-title">First flowers you gave</h2>
+              <p>I remember pa kung pano mo ibigay sa akin yung bulaklak na ginawa mo. Tanda ko non sinabi mo pa kay Mabin na tawagin ako, yun pala ibibigay mo lang ‘to sa labas ng locale. Grabe yung kilig ko that time eh HAHA.</p>
+            </section>
+            <section class="first-memory" id="church-memory" aria-labelledby="church-memory-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage of our church moments">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic13.jpeg" alt="A memory from church together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic14.jpeg" alt="A memory from church together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic15.jpeg" alt="A memory from church together" draggable="false">
+                </figure>
+              </div>
+              <h2 id="church-memory-title">Our church moments together</h2>
+              <p>YESSS, ang mga patagong holding hands natin, naalala ko non sa ilalim tayo ng jacket magka holding hands non tapos kinakabahan kasi baka may makakita. Then during breaktime, pupunta tayo sa tambayan natin which is the tricycle, tapos super cute mo kasi hihingi ka kiss HAHAHHAH</p>
+            </section>
+            <section class="first-memory" id="second-hangout" aria-labelledby="second-hangout-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage from our second hangout">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic10.jpeg" alt="A memory from our second hangout" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic11.jpeg" alt="A memory from our second hangout" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic12.jpeg" alt="A memory from our second hangout" draggable="false">
+                </figure>
+              </div>
+              <h2 id="second-hangout-title">Second Hangout sa House ko</h2>
+              <p>The unexpected moment natin kasi bigla bigla ka na lng pinaiwan ni Mama mo sa house namin para mag bonding tayo. I remember how shy we were. This day din yung 1st kiss natin na after non eh nagka hiyaan tayo sa isa’t isa.</p>
+            </section>
+            <section class="first-memory" id="ice-cream-memory" aria-labelledby="ice-cream-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage from our first ice cream date">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic16.jpeg" alt="A picture together from our first ice cream date" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic17.jpeg" alt="The cookies and cream ice cream from our date" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic18.jpeg" alt="Cookies and cream ice cream from our date" draggable="false">
+                </figure>
+              </div>
+              <h2 id="ice-cream-title">Our first ice cream date</h2>
+              <p>Cookies and cream your fav ice cream flavor. Sobrang cute mo talaga kumain ng ice cream non mahal. Ik super saglit lng non kasi hahatid na kita sa house mo non after pero I still enjoyed it. I love every moment with u</p>
+            </section>
+            <section class="first-memory" id="beach-memory" aria-labelledby="beach-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage from our first beach trip together with my family">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic19.jpeg" alt="Our first beach trip together with my family" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic20.jpeg" alt="A beach memory together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic21.jpeg" alt="A beach memory together" draggable="false">
+                </figure>
+              </div>
+              <h2 id="beach-title">Our first beach together with my fam</h2>
+              <p>Super kinakabahan pa ko neto kasi what if di ka payagan nila sis, pero Salamat sa Dios pinayagan ka po. Super enjoy and lucky talaga nung time na ‘to kasi nakasama kita sa gala namin ng fam ko kahit nagkanda suka suka ka sa byahe pero okay lang kasi pinatulog nmn kita nyan sa balikat ko. Then I remember din nung nagkaron tayo slight na away kasi inasar kita HAHAHAHHA</p>
+            </section>
+            <section class="first-memory" id="rcs-memory" aria-labelledby="rcs-title" hidden>
+              <figure class="single-memory-photo">
+                <img src="assets/pic22.jpeg" alt="A spontaneous RCS outing, holding a tiger stuffed toy" draggable="false">
+              </figure>
+              <h2 id="rcs-title">RCS together</h2>
+              <p>Eto yung gala natin na hindi plinano kasi super unexpected talaga, pero ang cute mo dyan habang hawak yung tiger na stuffed toy hehehe.</p>
+            </section>
+            <section class="first-memory" id="sm-memory" aria-labelledby="sm-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage from our first hangout with your ate at SM">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic23.jpg" alt="A memory from our SM hangout with your ate" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic24.jpg" alt="A memory from our SM hangout with your ate" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic25.jpg" alt="A memory from our SM hangout with your ate" draggable="false">
+                </figure>
+              </div>
+              <h2 id="sm-title">SM together with your ate</h2>
+              <p>1st Hangout natin ‘to with your ate, kahit ginabi na pero go lang kasi I’m safe with you naman. AHHHH nag arcade din pala tayo dito, pero super saglit lang kasi kailangan na natin kumain niyan. Enjoy pa rin lalo na nung kumain tayo sa kfc kasama ate mo.</p>
+            </section>
+            <section class="first-memory" id="montalban-memory" aria-labelledby="montalban-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage of our moments before I left for Montalban">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic26.jpeg" alt="A moment together before I left for Montalban" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic27.jpeg" alt="A moment together before I left for Montalban" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic28.jpeg" alt="A moment together before I left for Montalban" draggable="false">
+                </figure>
+              </div>
+              <h2 id="montalban-title">Before umalis pa Montalban</h2>
+              <p>Hayy eto na yung pic natin na nakakasad kasi eto na yung start ng LDR natin, pero konting tiis po baby ah? Loloobin din po magkikita tayo, mayayakap po kita ng mahigpit. I love you baby ko</p>
+            </section>
+            <section class="first-memory" id="video-call-memory" aria-labelledby="video-call-title" hidden>
+              <div class="first-memory-collage" aria-label="A collage of our video calls">
+                <figure class="collage-photo collage-photo-main">
+                  <img src="assets/pic29.png" alt="A video call together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-left">
+                  <img src="assets/pic30.png" alt="A video call together" draggable="false">
+                </figure>
+                <figure class="collage-photo collage-photo-right">
+                  <img src="assets/pic31.png" alt="A video call together" draggable="false">
+                </figure>
+              </div>
+              <h2 id="video-call-title">VIDEO CALLS</h2>
+              <p>HEHEHEHE ALAM MO YUNG KAHIT WALA NAG SASALITA MINSAN PERO SUPER ENJOY PA RIN. I mean at least nakikita ko yung kagandahan mo dba? Minsan super random na ng pinagagawa natin, matatawa na lang talaga eh HAHAH</p>
+            </section>
+            <p class="page-prompt">Touch the page edge to turn</p>
+          </div>
+        </div>
+      </div>
+      <p class="bottom-caption surprise-caption"><span>OUR MOMENTS TOGETHER</span><span class="caption-dot">·</span><span>a book made for you</span></p>
+      <a class="about-link-button" href="about-u.html">A little page about you <span aria-hidden="true">→</span></a>
+    </section>
+
+    <footer class="site-footer"><span>♡</span> a little place above the clouds <span>♡</span></footer>
+  </main>
+
+  <script>
+    const screens = [...document.querySelectorAll(".screen")];
+    const welcomeForm = document.querySelector("#welcome-form");
+    const passcodeForm = document.querySelector("#passcode-form");
+    const passwordInput = document.querySelector("#create-password");
+    const passcodeInput = document.querySelector("#passcode");
+    const errorMessage = document.querySelector("#passcode-error");
+    const book = document.querySelector("#memory-book");
+    const memoryPage = document.querySelector("#memory-page");
+    const firstMemory = document.querySelector("#first-memory");
+    const flowerMemory = document.querySelector("#flower-memory");
+    const churchMemory = document.querySelector("#church-memory");
+    const secondHangout = document.querySelector("#second-hangout");
+    const iceCreamMemory = document.querySelector("#ice-cream-memory");
+    const beachMemory = document.querySelector("#beach-memory");
+    const rcsMemory = document.querySelector("#rcs-memory");
+    const smMemory = document.querySelector("#sm-memory");
+    const montalbanMemory = document.querySelector("#montalban-memory");
+    const videoCallMemory = document.querySelector("#video-call-memory");
+    const pageNumber = document.querySelector("#page-number");
+    let currentPage = 0;
+
+    function showScreen(id) {
+      screens.forEach((screen) => {
+        const isActive = screen.id === id;
+        screen.hidden = !isActive;
+        screen.classList.toggle("active", isActive);
+      });
+      const firstInput = document.querySelector(`#${id} input`);
+      const firstFocusable = firstInput || document.querySelector(`#${id} [tabindex="0"]`);
+      if (firstFocusable) firstFocusable.focus({ preventScroll: true });
+    }
+
+    welcomeForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!welcomeForm.reportValidity()) return;
+      passwordInput.value = "";
+      showScreen("lock-screen");
+    });
+
+    document.querySelector(".visibility-toggle").addEventListener("click", (event) => {
+      const button = event.currentTarget;
+      const isVisible = passwordInput.type === "text";
+      passwordInput.type = isVisible ? "password" : "text";
+      button.textContent = isVisible ? "Show" : "Hide";
+      button.setAttribute("aria-label", isVisible ? "Show password" : "Hide password");
+      button.setAttribute("aria-pressed", String(!isVisible));
+      passwordInput.focus({ preventScroll: true });
+    });
+
+    passcodeForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!passcodeForm.reportValidity()) return;
+      if (passcodeInput.value === "0118") {
+        errorMessage.textContent = "";
+        passcodeInput.value = "";
+        currentPage = 0;
+        book.classList.remove("is-open");
+        memoryPage.hidden = true;
+        showScreen("surprise-screen");
+        return;
+      }
+      errorMessage.textContent = "Not quite, sweetheart. Try our special date again.";
+      passcodeInput.value = "";
+      passcodeInput.focus({ preventScroll: true });
+    });
+
+    document.querySelectorAll("[data-go]").forEach((button) => {
+      button.addEventListener("click", () => showScreen(button.dataset.go));
+    });
+    function openBook() {
+      currentPage = 1;
+      book.classList.add("is-open");
+      memoryPage.hidden = false;
+      updateMemoryPage();
+    }
+
+    document.querySelector("#book-cover").addEventListener("click", openBook);
+    document.querySelector("#book-cover").addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openBook();
+      }
+    });
+
+    function updateMemoryPage(direction = "next") {
+      memoryPage.classList.remove("turn-next", "turn-previous");
+      void memoryPage.offsetWidth;
+      memoryPage.classList.add(direction === "next" ? "turn-next" : "turn-previous");
+      const isFirstMemory = currentPage === 1;
+      const isFlowerMemory = currentPage === 2;
+      const isChurchMemory = currentPage === 3;
+      const isSecondHangout = currentPage === 4;
+      const isIceCreamMemory = currentPage === 5;
+      const isBeachMemory = currentPage === 6;
+      const isRcsMemory = currentPage === 7;
+      const isSmMemory = currentPage === 8;
+      const isMontalbanMemory = currentPage === 9;
+      const isVideoCallMemory = currentPage === 10;
+      firstMemory.hidden = !isFirstMemory;
+      flowerMemory.hidden = !isFlowerMemory;
+      churchMemory.hidden = !isChurchMemory;
+      secondHangout.hidden = !isSecondHangout;
+      iceCreamMemory.hidden = !isIceCreamMemory;
+      beachMemory.hidden = !isBeachMemory;
+      rcsMemory.hidden = !isRcsMemory;
+      smMemory.hidden = !isSmMemory;
+      montalbanMemory.hidden = !isMontalbanMemory;
+      videoCallMemory.hidden = !isVideoCallMemory;
+      pageNumber.textContent = `${String(currentPage).padStart(2, "0")} / 10`;
+    }
+
+    function turnPage(direction) {
+      if (direction === "previous" && currentPage === 1) {
+        currentPage = 0;
+        book.classList.remove("is-open");
+        memoryPage.hidden = true;
+        return;
+      }
+      if (direction === "next" && currentPage === 10) {
+        currentPage = 0;
+        book.classList.remove("is-open");
+        memoryPage.hidden = true;
+        return;
+      }
+      currentPage += direction === "next" ? 1 : -1;
+      updateMemoryPage(direction);
+    }
+
+    let pointerStartX = null;
+    let suppressClick = false;
+
+    memoryPage.addEventListener("pointerdown", (event) => {
+      pointerStartX = event.clientX;
+    });
+
+    memoryPage.addEventListener("pointerup", (event) => {
+      if (pointerStartX === null) return;
+      const distance = event.clientX - pointerStartX;
+      pointerStartX = null;
+      if (Math.abs(distance) < 45) return;
+      suppressClick = true;
+      turnPage(distance < 0 ? "next" : "previous");
+    });
+
+    memoryPage.addEventListener("pointercancel", () => {
+      pointerStartX = null;
+    });
+
+    memoryPage.addEventListener("dragstart", (event) => {
+      event.preventDefault();
+    });
+
+    memoryPage.addEventListener("click", (event) => {
+      if (suppressClick) {
+        suppressClick = false;
+        return;
+      }
+      const midpoint = memoryPage.getBoundingClientRect().left + memoryPage.clientWidth / 2;
+      turnPage(event.clientX >= midpoint ? "next" : "previous");
+    });
+
+    memoryPage.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        turnPage("next");
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        turnPage("previous");
+      } else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        turnPage("next");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a9dcff">
+  <meta name="description" content="A little comic starring us.">
+  <title>Our Little Comic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="sun-glow"></div>
+    <div class="cloud cloud-one"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-two"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-three"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-four"><i></i><i></i><i></i></div>
+    <div class="cloud cloud-five"><i></i><i></i><i></i></div>
+  </div>
+
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Back to our moments together">
+        <span class="brand-icon" aria-hidden="true">♡</span>
+        <span>our little sky</span>
+      </a>
+      <span class="header-note">a little something for you</span>
+    </header>
+
+    <section class="screen active comic-only-screen" aria-label="A little comic and some surprises">
+      <figure class="comic-photo-stage">
+        <img class="comic-photo" src="assets/comic.png" alt="Us making funny faces together, one in a green shirt and one in a blue shirt">
+        <div class="comic-speech comic-speech-green">Sorry na po<span class="speech-tail" aria-hidden="true"></span></div>
+        <div class="comic-speech comic-speech-blue">Balakajan<span class="speech-tail" aria-hidden="true"></span></div>
+      </figure>
+
+      <article class="bouquet-card" aria-labelledby="bouquet-title">
+        <div class="bouquet-photos">
+          <img class="bouquet-illustration" src="assets/flower.png" alt="A colorful bouquet of flowers wrapped in purple paper">
+        </div>
+        <div class="bouquet-copy">
+          <p class="bouquet-kicker">A little something for you</p>
+          <h1 id="bouquet-title">A bouquet just for you</h1>
+          <p>A little bouquet for the one who makes my days brighter. Thank you for filling our moments with so much love.</p>
+          <span class="bouquet-heart" aria-hidden="true">♡</span>
+        </div>
+      </article>
+
+      <section class="relationship-timer" aria-labelledby="relationship-title">
+        <p class="timer-kicker">Since January 18, 2025</p>
+        <h2 id="relationship-title">We’ve been together for</h2>
+        <div class="timer-count" role="timer" aria-label="Time we've been together" aria-live="off">
+          <div class="timer-unit timer-days">
+            <span class="timer-value" id="timer-days">0</span>
+            <span class="timer-label">days</span>
+          </div>
+          <span class="timer-separator" aria-hidden="true">:</span>
+          <div class="timer-unit">
+            <span class="timer-value" id="timer-hours">00</span>
+            <span class="timer-label">hours</span>
+          </div>
+          <span class="timer-separator" aria-hidden="true">:</span>
+          <div class="timer-unit">
+            <span class="timer-value" id="timer-minutes">00</span>
+            <span class="timer-label">minutes</span>
+          </div>
+          <span class="timer-separator" aria-hidden="true">:</span>
+          <div class="timer-unit">
+            <span class="timer-value" id="timer-seconds">00</span>
+            <span class="timer-label">seconds</span>
+          </div>
+        </div>
+        <p class="timer-caption">And counting, every second with you ♡</p>
+      </section>
+
+      <section class="letter-section" aria-labelledby="letter-title">
+        <p class="letter-kicker">One last little surprise</p>
+        <h2 id="letter-title">A letter for you</h2>
+        <div class="envelope-control">
+          <button class="envelope-button" id="envelope-toggle" type="button" aria-expanded="false" aria-controls="read-letter" aria-label="Open the envelope and reveal your letter">
+            <span class="envelope-stage" aria-hidden="true">
+              <span class="envelope">
+                <span class="envelope-pocket"></span>
+                <span class="envelope-letter"></span>
+                <span class="envelope-front"></span>
+                <span class="envelope-flap"></span>
+                <span class="envelope-heart">♡</span>
+              </span>
+            </span>
+          </button>
+          <button class="read-letter-trigger" id="read-letter" type="button" aria-label="Read the letter" hidden>Tap to read</button>
+          <span class="envelope-prompt" id="envelope-prompt">Tap the envelope to open your letter</span>
+        </div>
+      </section>
+    </section>
+
+    <footer class="site-footer"><span>♡</span> a little place above the clouds <span>♡</span></footer>
+  </main>
+  <dialog class="love-letter-dialog" id="love-letter-dialog" aria-labelledby="love-letter-title">
+    <article class="love-letter-paper">
+      <button class="love-letter-close" id="close-love-letter" type="button" aria-label="Close the letter">×</button>
+      <p class="love-letter-kicker">A little letter for you</p>
+      <h2 id="love-letter-title">Hi wife ko,</h2>
+      <div class="love-letter-message">
+        <p>Ik di tayo okay now kasi naging makulit na naman po ako. I’m sorry po wife ko ah. I’m sorry po if sometimes makulit and pasaway yung asawa mo, pero mahal na mahal ka netong makulit na ‘to.</p>
+        <p>Even though sometimes nagkakaron tayo ng argument or misunderstandings, don’t worry po kasi hindi mawawala basta basta feelings ko sayo. I love you even your mad, happy, sad, annoyed, or kahit anong emotions man po na f-feel mo, mahal kita.</p>
+        <p>Wife, I’m so proud of you always po. I’m proud of you for surviving yung silent battles u don’t talk about. Always remember na andito lng po ako, and ofc si God po. I love you po baby, mahal na mahal po kita.</p>
+        <p>I’m sorry po ulit ah. I’m sorry din po baby, hindi na po ulit ako sasagot sayo po. Ik po na parang di kita na respect po nung ginawa ko ‘yon. I’m sorry po ah, hindi na po uulitin po.</p>
+      </div>
+      <p class="love-letter-signoff">Mahal na mahal kita ♡</p>
+    </article>
+  </dialog>
+  <script>
+    const envelopeToggle = document.querySelector("#envelope-toggle");
+    const envelopePrompt = document.querySelector("#envelope-prompt");
+    const envelopeLetter = document.querySelector(".envelope-letter");
+    const envelopeFlap = document.querySelector(".envelope-flap");
+    const readLetter = document.querySelector("#read-letter");
+    const loveLetterDialog = document.querySelector("#love-letter-dialog");
+    const closeLoveLetter = document.querySelector("#close-love-letter");
+    const relationshipStart = new Date(2025, 0, 18);
+    const timerParts = {
+      days: document.querySelector("#timer-days"),
+      hours: document.querySelector("#timer-hours"),
+      minutes: document.querySelector("#timer-minutes"),
+      seconds: document.querySelector("#timer-seconds")
+    };
+
+    envelopeToggle.addEventListener("click", () => {
+      const isOpen = envelopeToggle.getAttribute("aria-expanded") === "true";
+      envelopeToggle.setAttribute("aria-expanded", String(!isOpen));
+      envelopeToggle.setAttribute("aria-label", isOpen ? "Open the envelope and reveal your letter" : "Close the envelope");
+      envelopeToggle.classList.toggle("is-open", !isOpen);
+      envelopeLetter.style.cssText = isOpen ? "" : "z-index: 4; bottom: 28px; left: 2px; width: 170px; height: 184px;";
+      envelopeFlap.style.cssText = isOpen ? "" : "z-index: 0; transform: rotateX(180deg);";
+      readLetter.hidden = isOpen;
+      envelopePrompt.textContent = isOpen ? "Tap the envelope to open your letter" : "Tap the letter to read your message";
+    });
+
+    readLetter.addEventListener("click", () => {
+      loveLetterDialog.showModal();
+    });
+
+    closeLoveLetter.addEventListener("click", () => {
+      loveLetterDialog.close();
+    });
+
+    loveLetterDialog.addEventListener("click", (event) => {
+      if (event.target === loveLetterDialog) loveLetterDialog.close();
+    });
+
+    function updateRelationshipTimer() {
+      const elapsedSeconds = Math.max(0, Math.floor((Date.now() - relationshipStart.getTime()) / 1000));
+      const days = Math.floor(elapsedSeconds / 86400);
+      const hours = Math.floor((elapsedSeconds % 86400) / 3600);
+      const minutes = Math.floor((elapsedSeconds % 3600) / 60);
+      const seconds = elapsedSeconds % 60;
+
+      timerParts.days.textContent = String(days);
+      timerParts.hours.textContent = String(hours).padStart(2, "0");
+      timerParts.minutes.textContent = String(minutes).padStart(2, "0");
+      timerParts.seconds.textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateRelationshipTimer();
+    window.setInterval(updateRelationshipTimer, 1000);
+  </script>
+</body>
+</html>
